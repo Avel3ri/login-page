@@ -9,14 +9,17 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="">
+        <form action="login.php" method="post">
             <h1>Login</h1>
+            <?php if (isset($_GET['error'])) {?>
+                <p class="error"><?=$_GET['error']?></p>
+            <?php } ?>
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" name="username" placeholder="Username" required>
                 <i class='bx bxs-user' ></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt' ></i>
             </div>
 
